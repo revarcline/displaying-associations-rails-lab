@@ -1,0 +1,8 @@
+<h1>All Artists</h1>
+
+<% Artist.order(:name).each do |artist| %>
+  <div class="artist_link">
+    <%= link_to artist.name, artist_path(artist) %> -
+    <%= artist.song_count %> song(s)
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>All Songs</h1>
+
+<% Song.order(:title).each do |song| %>
+  <div class="song_link">
+    <%= link_to song.display_title_and_artist, song_path(song) %>
+  </div>
+<% end %>
